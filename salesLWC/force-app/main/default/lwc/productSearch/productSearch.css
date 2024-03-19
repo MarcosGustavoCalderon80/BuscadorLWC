@@ -1,0 +1,19 @@
+.product-item:hover {
+    color: blue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    size: 5px;
+}
+.product-item {
+    font-family: Salesforce Sans;
+    font-size: larger;
+    margin: 5px 0px 0px 10px;
+}
+.custom-search-input {
+    --lwc-formLabelFontSize: 18px;
+    font-family: sans-serif;
+    margin: 0px 10px 5px 5px;
+}
+.noFound {
+    margin: 0px 10px 5px 5px;
+    color: crimson;
+}

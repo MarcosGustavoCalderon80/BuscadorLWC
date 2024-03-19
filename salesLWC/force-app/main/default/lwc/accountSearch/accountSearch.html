@@ -1,13 +1,14 @@
 <template>
-    <lightning-input type="search" label="Search Accounts" value={searchTermAcc} onchange={handleSearchChangeAcc}></lightning-input>
+    <lightning-input type="search" label="Search Accounts" value={searchTermAcc} onchange={handleSearchChangeAcc} class="custom-search-input"></lightning-input>
     <template if:true={accounts.length}>
         <ul>
             <template for:each={accounts} for:item="account">
-                <li key={account.Id}>{account.Name}</li>
+                <li key={account.Id} data-id={account.Id} onclick={navigateToAccount} class="account-item">{account.Name}</li>
             </template>
         </ul>
     </template>
     <template if:false={accounts.length}>
-        <p>No accounts found.</p>
+        <p class="noFound">No accounts found.</p>
     </template>
 </template>
+

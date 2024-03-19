@@ -1,13 +1,13 @@
 <template>
-    <lightning-input type="search" label="Search Products" value={searchTerm} onchange={handleSearchChange}></lightning-input>
+    <lightning-input type="search" label="Search Products" value={searchTerm} onchange={handleSearchChange} class="custom-search-input"></lightning-input>
     <template if:true={products.length}>
         <ul>
             <template for:each={products} for:item="product">
-                <li key={product.Id}>{product.Name}</li>
+                <li key={product.Id} data-id={product.Id} onclick={navigateToProduct} class="product-item">{product.Name}</li>
             </template>
         </ul>
     </template>
     <template if:false={products.length}>
-        <p>No products found.</p>
+        <p class="noFound">No products found.</p>
     </template>
 </template>
